@@ -33,6 +33,25 @@ const getEvents = function () {
       // ed è qui dentro che voi avete accesso ai dati!
       // qui dentro manipoleremo il DOM in modo da utilizzarli
       console.log('ARRAYOFEVENTS', arrayOfEvents)
+      // adesso, per ogni evento recuperato, creiamo una colonna con dentro una card
+      // e le disponiamo nella riga events-row
+      const row = document.getElementById('events-row')
+      arrayOfEvents.forEach((concert) => {
+        row.innerHTML += `
+            <div class="col">
+                <div class="card h-100 d-flex flex-column">
+                    <img src="https://www.gedistatic.it/content/gnn/img/lastampa/2024/03/08/103515446-e41635c6-62d3-43c1-8974-f0a9d7338cb4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">${concert.name}</h5>
+                        <p class="card-text">${concert.description}</p>
+                        <p class="card-text">${concert.price}</p>
+                        <p class="card-text">${concert.time}</p>
+                    </div>
+                    <a href="./details.html?concertID=${concert._id}" class="btn btn-primary">Vai ai dettagli</a>
+                </div>
+            </div>
+        `
+      })
     })
     .catch((err) => {
       console.log('PROBLEMA', err)

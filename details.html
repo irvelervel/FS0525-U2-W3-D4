@@ -35,9 +35,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./backoffice.html"
-                  >Backoffice</a
-                >
+                <a class="nav-link" href="./backoffice.html">Backoffice</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -55,63 +53,27 @@
         </div>
       </nav>
       <h1 class="text-center my-3">EpiTicket ONE</h1>
-      <h3 class="text-center my-3">Pagina amministrazione</h3>
+      <h3 class="text-center my-3">Dettagli Concerto</h3>
     </header>
     <main class="flex-grow-1">
       <div class="container">
         <div class="row justify-content-center my-3">
           <div class="col col-12 col-md-8 col-lg-6">
-            <!-- FORM PER LA GESTIONE DEGLI EVENTI -->
-            <form id="event-form">
-              <!-- CAMPO NAME -->
-              <div class="mb-3">
-                <label for="name" class="form-label">Nome concerto</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  aria-describedby="name-input"
-                  placeholder="Pupo in concerto"
-                  required
-                />
+            <div class="card">
+              <img
+                src="https://picsum.photos/600/600"
+                class="card-img-top"
+                alt="concert-image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
-              <!-- CAMPO DESCRIPTION -->
-              <div class="mb-3">
-                <label for="description" class="form-label"
-                  >Descrizione concerto</label
-                >
-                <textarea
-                  class="form-control"
-                  id="description"
-                  aria-describedby="description-input"
-                  placeholder="Evento imperdibile blabla..."
-                  required
-                ></textarea>
-              </div>
-              <!-- CAMPO PRICE -->
-              <div class="mb-3">
-                <label for="price" class="form-label">Prezzo concerto</label>
-                <input
-                  type="number"
-                  class="form-control"
-                  id="price"
-                  aria-describedby="price-input"
-                  required
-                />
-              </div>
-              <!-- CAMPO TIME -->
-              <div class="mb-3">
-                <label for="time" class="form-label">Data/ora concerto</label>
-                <input
-                  type="datetime-local"
-                  class="form-control"
-                  id="time"
-                  aria-describedby="time-input"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-primary">INVIA</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -130,6 +92,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/backoffice.js"></script>
+    <script src="./scripts/details.js"></script>
   </body>
 </html>
